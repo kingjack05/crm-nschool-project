@@ -6,9 +6,9 @@
     "deploy": "vercel"
   },
   "dependencies": {
-    "@orpc/client": "^1.6.0",
-    "@orpc/openapi": "^1.6.0",
-    "@orpc/server": "^1.6.0",
+    "@orpc/client": "^1.6.3",
+    "@orpc/openapi": "^1.6.3",
+    "@orpc/server": "^1.6.3",
     "hono": "^4.8.3",
     "zod": "^3.25.67"
   },

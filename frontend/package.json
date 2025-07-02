@@ -11,6 +11,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@orpc/client": "^1.6.3",
+    "@orpc/tanstack-query": "^1.6.3",
+    "@tanstack/react-query": "^5.81.5",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },

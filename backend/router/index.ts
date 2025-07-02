@@ -1,4 +1,4 @@
-import { ORPCError, os } from "@orpc/server";
+import { ORPCError, os, RouterClient } from "@orpc/server";
 import { z } from "zod";
 
 const PlanetSchema = z.object({
@@ -54,3 +54,5 @@ export const router = {
     // create: createPlanet
   },
 };
+
+export type Router = RouterClient<typeof router>;

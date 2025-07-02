@@ -2,6 +2,7 @@ import { Hono } from "hono";
 import { handle } from "hono/vercel";
 import { RPCHandler } from "@orpc/server/fetch";
 import { OpenAPIHandler } from "@orpc/openapi/fetch";
+import { cors } from "hono/cors";
 import { router } from "../router/index.js";
 
 export const config = {
@@ -11,6 +12,8 @@ export const config = {
 const app = new Hono().basePath("/api");
 
 const rpcHandler = new RPCHandler(router);
+
+app.use(cors());
 
 app.use("/rpc/*", async (c, next) => {
   const { matched, response } = await rpcHandler.handle(c.req.raw, {
