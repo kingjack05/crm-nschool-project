@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "build:forBackend": "tsc -b && vite build --outDir=../backend/dist",
+    "build:forBackend": "tsc -b && vite build --outDir=../backend/public",
     "lint": "eslint .",
     "preview": "vite preview"
   },

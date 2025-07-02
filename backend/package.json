@@ -13,6 +13,7 @@
     "zod": "^3.25.67"
   },
   "devDependencies": {
-    "vercel": "^32.4.1"
+    "vercel": "^44.2.8",
+    "typescript": "^5.8.3"
   }
 }
