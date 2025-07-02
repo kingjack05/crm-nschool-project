@@ -1,0 +1,18 @@
+{
+  "name": "backend",
+  "type": "module",
+  "scripts": {
+    "start": "vercel dev",
+    "deploy": "vercel"
+  },
+  "dependencies": {
+    "@orpc/client": "^1.6.0",
+    "@orpc/openapi": "^1.6.0",
+    "@orpc/server": "^1.6.0",
+    "hono": "^4.8.3",
+    "zod": "^3.25.67"
+  },
+  "devDependencies": {
+    "vercel": "^32.4.1"
+  }
+}
