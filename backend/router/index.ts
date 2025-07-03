@@ -1,10 +1,12 @@
 import { ORPCError, os, RouterClient } from "@orpc/server";
 import { z } from "zod";
+import { db } from "../db/index.js";
+import { planetsTable } from "../db/schema.js";
 
 const PlanetSchema = z.object({
   id: z.number().int().min(1),
   name: z.string(),
-  description: z.string().optional(),
+  description: z.string().optional().nullable(),
 });
 
 export const listPlanet = os
@@ -17,8 +19,8 @@ export const listPlanet = os
   )
   .output(z.array(PlanetSchema))
   .handler(async ({ input }) => {
-    // your list code here
-    return [{ id: 1, name: "name" }];
+    const planets = await db.select().from(planetsTable);
+    return planets;
   });
 
 export const findPlanet = os

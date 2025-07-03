@@ -31,7 +31,6 @@ app.use("/rpc/*", async (c, next) => {
 const openapiHandler = new OpenAPIHandler(router);
 
 app.use("/rest/*", async (c, next) => {
-  console.log(c.req.url);
   const { matched, response } = await openapiHandler.handle(c.req.raw, {
     prefix: "/api/rest",
     context: {}, // Provide initial context if needed
