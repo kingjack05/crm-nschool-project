@@ -3,7 +3,8 @@
   "type": "module",
   "scripts": {
     "start": "vercel dev",
-    "deploy": "vercel"
+    "deploy": "vercel",
+    "db:push": "pnpm drizzle-kit push --strict --verbose"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.0.1",
